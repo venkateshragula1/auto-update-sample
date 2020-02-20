@@ -1,0 +1,31 @@
+{
+  "name": "auto-update",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder build --linux --publish never",
+    "deploy": "electron-builder build --linux --publish always"
+  },
+  "linux": {
+    "target": [
+      "AppImage",
+      "deb"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/venkateshragula1/auto-update-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.0.1",
+    "electron-builder": "^22.3.2"
+  },
+  "dependencies": {
+    "electron-updater": "^4.2.2"
+  }
+}
